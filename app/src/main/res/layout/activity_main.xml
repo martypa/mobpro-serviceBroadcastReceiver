@@ -54,6 +54,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="onClickMusicStart"
                     android:text="musicplayer starten" />
 
                 <Button
@@ -61,6 +62,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="onClickMusicStop"
                     android:text="musicplayer stoppen" />
             </LinearLayout>
 
@@ -68,6 +70,8 @@
                 android:id="@+id/serviceCheckBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:checked="false"
+                android:onClick="onClickCheckBoxMusicService"
                 android:text="Mit Service verbunden" />
 
             <LinearLayout
@@ -81,6 +85,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="onClickPlayNext"
                     android:text="nächstes stück" />
 
                 <Button
@@ -88,6 +93,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="onClickHistory"
                     android:text="history abfragen" />
             </LinearLayout>
 
@@ -103,22 +109,34 @@
                 android:textSize="16sp" />
 
             <CheckBox
-                android:id="@+id/checkBox2"
+                android:id="@+id/broadcastReg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckBox" />
+                android:onClick="onCLickCheckBoxBroadCast"
+                android:text="BroadcastReceiver registrieren" />
 
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="Nachricht vom BroadcastReceiver:" />
 
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/broadcastText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Broadcastempfang deaktiviert!" />
+
+            <Button
+                android:id="@+id/sendBroadcastButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:onClick="onClickSendBroadcast"
+                android:text="Broadcast verschiecken" />
 
         </LinearLayout>
     </ScrollView>
